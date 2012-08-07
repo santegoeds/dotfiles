@@ -1,0 +1,22 @@
+[ui]
+username = Tjerk Santegoeds <tsan@tdias.com>
+ignore = ~/.hgignore
+
+[alias]
+__status = status
+stat = !hg __status $($HG root) $HG_ARGS
+
+[pager]
+ignore = update
+attend = grep
+
+[extensions]
+color =
+pager =
+bookmarks =
+fetch =
+purge =
+extdiff = 
+rebase =
+mq =
+collapse = ~/.hgext/hgcollapse/hgext/collapse.py

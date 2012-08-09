@@ -4,7 +4,7 @@ ignore = ~/.hgignore
 
 [alias]
 __status = status
-stat = !hg __status $($HG root) $HG_ARGS
+stat = !hg __status $($HG root) $HG_ARGS -S
 
 [pager]
 ignore = update

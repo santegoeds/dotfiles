@@ -1,9 +1,10 @@
 call pathogen#infect()
 syntax on
 set ruler
-set ts=4
-set sw=4
+set ts=8 sw=4 sts=4
 set autoindent
+set smartindent
+set smarttab
 set nowrap
 set expandtab
 set novisualbell

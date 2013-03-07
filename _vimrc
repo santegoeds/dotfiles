@@ -9,6 +9,7 @@ set nowrap
 set expandtab
 set novisualbell
 set sidescroll=1
+set backspace=indent,eol,start
 
 set bg=dark
 colorscheme elflord

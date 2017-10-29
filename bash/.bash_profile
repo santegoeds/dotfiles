@@ -10,3 +10,4 @@ if [[ -e "$HOME/.profile.d" ]]; then
         . $prof
     done
 fi
+if [ -e /home/vagrant/.nix-profile/etc/profile.d/nix.sh ]; then . /home/vagrant/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

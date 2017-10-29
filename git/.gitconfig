@@ -1,13 +1,18 @@
 [user]
-	name = Tjerk Santegoeds
-	email = tsan@tdias.com
+    name = Tjerk Santegoeds
+    email = tsan@tdias.com
 
 [alias]
     stat = status
     co = checkout
     ci = commit
+    passport = !${HOME}/.git/hooks/bin/git-passport/git-passport.py
 
 [color]
     ui = auto
+
 [push]
-	default = simple
+    default = simple
+
+[init]
+    templatedir = ~/.git/templates

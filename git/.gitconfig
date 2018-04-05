@@ -7,6 +7,7 @@
     co = checkout
     ci = commit
     passport = !${HOME}/.git/hooks/bin/git-passport/git-passport.py
+    cam = commit --amend --no-edit
 
 [color]
     ui = auto

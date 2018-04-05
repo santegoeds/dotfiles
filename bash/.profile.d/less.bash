@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export LESS=-RX
+export LESS=-RXE

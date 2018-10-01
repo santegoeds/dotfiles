@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CARGO_DIR="$HOME/.cargo/bin"
-if [[ -d "$CARGO_DIR" ]]; then
-    export PATH=$CARGO_DIR:$PATH
+CARGO_ENV="$HOME/.cargo/env"
+if [[ -r "$CARGO_ENV" ]]; then
+    source "$CARGO_ENV"
 fi
 

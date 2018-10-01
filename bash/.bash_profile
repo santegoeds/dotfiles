@@ -1,5 +1,5 @@
-# include .bashrc if it exists
 [[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
+[[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 [[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
@@ -10,4 +10,5 @@ if [[ -e "$HOME/.profile.d" ]]; then
         . $prof
     done
 fi
-if [ -e /home/vagrant/.nix-profile/etc/profile.d/nix.sh ]; then . /home/vagrant/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export PATH="$HOME/.cargo/bin:$PATH"

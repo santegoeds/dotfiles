@@ -11,4 +11,3 @@ if [[ -e "$HOME/.profile.d" ]]; then
     done
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"

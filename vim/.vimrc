@@ -10,9 +10,10 @@ set expandtab
 set novisualbell
 set sidescroll=1
 set backspace=indent,eol,start
+set virtualedit=all
 
-set bg=dark
-colorscheme elflord
+set bg=light
+"colorscheme elflord
 
 set tags=./tags;/
 

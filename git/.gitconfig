@@ -8,6 +8,7 @@
     ci = commit
     passport = !${HOME}/.git/hooks/bin/git-passport/git-passport.py
     cam = commit --amend --no-edit
+    merged=!git branch --merged |egrep -v '(master|develop)'
 
 [color]
     ui = auto
@@ -17,3 +18,20 @@
 
 [init]
     templatedir = ~/.git/templates
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+[core]
+	pager = diff-so-fancy | less -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

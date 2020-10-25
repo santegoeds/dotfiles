@@ -1,0 +1,17 @@
+layout_conda() {
+    __conda_exe=$(which conda 2>/dev/null)
+    if [[ $? -ne 0 ]]; then
+        echo 'conda executable not found'
+        exit 1
+    fi
+
+    __envdir=$(expand_path ./.direnv)
+    if ! [ -e $__envdir ]; then
+        __python='python=3'
+        __python=${1:-"$__python"}
+        conda create -y -p $__envdir $__python
+    fi
+
+    __conda_activate=$(dirname $__conda_exe)/activate
+    source $__conda_activate $__envdir
+}

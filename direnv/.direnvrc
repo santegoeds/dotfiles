@@ -1,6 +1,5 @@
 layout_conda() {
-    __conda_exe=$(which conda 2>/dev/null)
-    if [[ $? -ne 0 ]]; then
+    if ! type conda 2>/dev/null >&2; then
         echo 'conda executable not found'
         exit 1
     fi
@@ -12,6 +11,6 @@ layout_conda() {
         conda create -y -p $__envdir $__python
     fi
 
-    __conda_activate=$(dirname $__conda_exe)/activate
-    source $__conda_activate $__envdir
+    __conda_root=$(conda config --show root_prefix |awk '{ print $2; }')
+    source $__conda_root/bin/activate $__envdir
 }
